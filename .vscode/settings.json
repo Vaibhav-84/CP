@@ -2,6 +2,7 @@
     "files.associations": {
         "*.html": "html",
         "*.js": "javascript",
-        "exception": "cpp"
+        "exception": "cpp",
+        "vector": "cpp"
     }
 }
