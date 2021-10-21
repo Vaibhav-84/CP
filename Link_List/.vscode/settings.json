@@ -2,7 +2,6 @@
     "files.associations": {
         "*.html": "html",
         "*.js": "javascript",
-        "exception": "cpp",
-        "vector": "cpp"
+        "ostream": "cpp"
     }
 }
