@@ -33,7 +33,7 @@ node* addition(node* l1, node* l2){
     node* dum = new node(0);
     node* temp = dum;
     int carry=0;
-    while(l1 != NULL || l2!=NULL || carry){
+    while(l1 != NULL || l2!=NULL || carry!=0){
         int sum=0;
         if (l1 != NULL)
         {

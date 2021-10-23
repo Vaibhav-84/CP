@@ -29,17 +29,7 @@ void insertAtTail(node* &head, int val){
     temp->next=n;
 }
 
-node* middlenode(node* &head){
-    node* slow = head;
-    node* fast = head;
-    while (fast->next != NULL || fast != NULL)
-    {
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-    return slow;
-    
-}
+
 
 
 void display(node* head){
@@ -51,12 +41,26 @@ void display(node* head){
     cout<<"NULL"<<endl;
 }
 
+node* middlenode(node* &head){
+    node* slow = head;
+    node* fast = head;
+    while (fast->next != NULL && fast != NULL)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    cout<<slow->data;
+    return slow;
+    
+}
+
 int main(){
     node* head = NULL;
     insertAtTail(head, 1);
     insertAtTail(head, 45);
     insertAtTail(head, 32);
     insertAtTail(head, 33);
+    insertAtTail(head, 38);
     insertAtTail(head, 38);
     node* middle = middlenode(head);
     cout<<middle->data;

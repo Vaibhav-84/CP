@@ -64,8 +64,6 @@ int main(){
     insertAtTail(head, 3);
     insertAtTail(head, 4);
     insertAtTail(head, 5);
-    display(head);
-    cout<<"asdesad"<<endl;
     node* newnode = remove(head, 3);
     display(newnode);
     return 0;
