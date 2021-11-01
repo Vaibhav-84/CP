@@ -1,21 +1,17 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-//Tortoise method
 
 class node{
     public:
     int data;
-    node* next;
-
+    node* next; 
     node(int val){
         data = val;
-        next = NULL;
+        next=NULL;
     }
 };
 
 void insertAtTail(node* &head, int val){
-    
     node* n = new node(val);
     if(head==NULL){
         head=n;
@@ -25,12 +21,8 @@ void insertAtTail(node* &head, int val){
     while(temp->next != NULL){
         temp=temp->next;
     }
-
     temp->next=n;
 }
-
-
-
 
 void display(node* head){
     node* temp=head;
@@ -41,17 +33,28 @@ void display(node* head){
     cout<<"NULL"<<endl;
 }
 
-int middlenode(node* &head){
-    node* slow = head;
-    node* fast = head;
-    while (fast != NULL && fast->next != NULL)
-    {
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-    return slow->data;
+node* rotateNode(node* &head, int k){
+    if(!head || !head->next || k==0) return head;
     
+    node* cur = head;
+    int len = 1;
+    while(cur->next && ++len){
+        cur = cur->next;
+    }
+
+    cur->next = head;
+    k = k%len;
+    k = len-k;
+    while(k--){
+        cur = cur->next;
+    }
+
+    head = cur->next;
+    cur->next = NULL;
+
+    return head;
 }
+
 
 int main(){
     node* head = NULL;
@@ -60,7 +63,8 @@ int main(){
     insertAtTail(head, 3);
     insertAtTail(head, 4);
     insertAtTail(head, 5);
-    // insertAtTail(head, 6);
-    cout<<middlenode(head);
+    display(head);
+    node* result=rotateNode(head, 3);
+    display(result);
     return 0;
-}
+} 

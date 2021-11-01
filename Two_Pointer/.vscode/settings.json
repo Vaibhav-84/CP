@@ -2,8 +2,8 @@
     "files.associations": {
         "*.html": "html",
         "*.js": "javascript",
-        "ostream": "cpp",
-        "xutility": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "xstring": "cpp",
+        "iostream": "cpp"
     }
 }
