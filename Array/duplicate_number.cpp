@@ -30,8 +30,8 @@ int duplicate(vector<int>& nums){
 }
 
 int main(){
-    vector<int> arr{1, 3, 4, 5, 2, 5};
-    sort(arr.begin(), arr.end());
+    vector<int> arr{1, 3, 4, 6, 2, 5, 7, 7};
+    // sort(arr.begin(), arr.end());
     int result = duplicate(arr);
     cout<<result;
     return 0;

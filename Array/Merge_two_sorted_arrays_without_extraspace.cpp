@@ -1,5 +1,5 @@
 // C++ program for illustration of swap() function
-#include<iostream>
+#include<bits/stdc++.h>
 #include <algorithm>
 #include<vector>
 using namespace std;
